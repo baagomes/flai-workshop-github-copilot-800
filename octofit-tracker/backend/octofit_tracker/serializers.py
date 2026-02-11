@@ -15,8 +15,8 @@ class UserSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         """Convert ObjectId to string"""
         representation = super().to_representation(instance)
-        if instance.id:
-            representation['id'] = str(instance.id)
+        if instance.pk:
+            representation['id'] = str(instance.pk)
         return representation
 
 
@@ -37,8 +37,8 @@ class TeamSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         """Convert ObjectId to string"""
         representation = super().to_representation(instance)
-        if instance.id:
-            representation['id'] = str(instance.id)
+        if instance.pk:
+            representation['id'] = str(instance.pk)
         return representation
 
 
@@ -52,8 +52,8 @@ class ActivitySerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         """Convert ObjectId to string"""
         representation = super().to_representation(instance)
-        if instance.id:
-            representation['id'] = str(instance.id)
+        if instance.pk:
+            representation['id'] = str(instance.pk)
         return representation
 
 
@@ -67,8 +67,8 @@ class LeaderboardSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         """Convert ObjectId to string"""
         representation = super().to_representation(instance)
-        if instance.id:
-            representation['id'] = str(instance.id)
+        if instance.pk:
+            representation['id'] = str(instance.pk)
         return representation
 
 
@@ -78,6 +78,13 @@ class WorkoutSerializer(serializers.ModelSerializer):
     class Meta:
         model = Workout
         fields = ['id', 'name', 'description', 'duration_minutes', 'difficulty_level', 'exercises', 'target_audience']
+
+    def to_representation(self, instance):
+        """Convert ObjectId to string"""
+        representation = super().to_representation(instance)
+        if instance.pk:
+            representation['id'] = str(instance.pk)
+        return representation
 
     def to_representation(self, instance):
         """Convert ObjectId to string"""
