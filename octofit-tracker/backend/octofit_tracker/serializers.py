@@ -22,10 +22,17 @@ class UserSerializer(serializers.ModelSerializer):
 
 class TeamSerializer(serializers.ModelSerializer):
     """Serializer for Team model"""
+    members_count = serializers.SerializerMethodField()
     
     class Meta:
         model = Team
-        fields = ['id', 'name', 'description', 'members', 'total_points', 'created_at']
+        fields = ['id', 'name', 'description', 'members', 'members_count', 'total_points', 'created_at']
+
+    def get_members_count(self, obj):
+        """Get the count of members in the team"""
+        if isinstance(obj.members, list):
+            return len(obj.members)
+        return 0
 
     def to_representation(self, instance):
         """Convert ObjectId to string"""
@@ -55,7 +62,7 @@ class LeaderboardSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Leaderboard
-        fields = ['id', 'rank', 'user_name', 'user_email', 'team', 'points', 'activities_count', 'updated_at']
+        fields = ['id', 'rank', 'user_name', 'user_email', 'team', 'team_name', 'points', 'activities_count', 'total_calories_burned', 'updated_at']
 
     def to_representation(self, instance):
         """Convert ObjectId to string"""

@@ -61,8 +61,10 @@ class Leaderboard(models.Model):
     user_name = models.CharField(max_length=255)
     user_email = models.EmailField()
     team = models.CharField(max_length=255)
+    team_name = models.CharField(max_length=255, null=True, blank=True)
     points = models.IntegerField()
     activities_count = models.IntegerField()
+    total_calories_burned = models.IntegerField(default=0)
     updated_at = models.CharField(max_length=100)
 
     objects = models.DjongoManager()

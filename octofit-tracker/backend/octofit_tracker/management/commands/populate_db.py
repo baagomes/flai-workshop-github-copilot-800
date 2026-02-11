@@ -134,13 +134,17 @@ class Command(BaseCommand):
         # Create Leaderboard
         leaderboard = []
         for rank, user in enumerate(sorted(all_users, key=lambda x: x['total_points'], reverse=True), 1):
+            # Calculate total calories burned for this user
+            user_calories = sum(a['calories_burned'] for a in activities if a['user_email'] == user['email'])
             leaderboard.append({
                 'rank': rank,
                 'user_name': user['name'],
                 'user_email': user['email'],
                 'team': user['team'],
+                'team_name': user['team'],
                 'points': user['total_points'],
-                'activities_count': 5,
+                'activities_count': len([a for a in activities if a['user_email'] == user['email']]),
+                'total_calories_burned': user_calories,
                 'updated_at': '2025-02-11'
             })
         db.leaderboard.insert_many(leaderboard)
