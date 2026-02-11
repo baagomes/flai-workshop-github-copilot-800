@@ -1,0 +1,38 @@
+<svg width="150" height="40" viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .octopus-body { fill: #667eea; }
+    .octopus-eye { fill: white; }
+    .octopus-pupil { fill: #667eea; }
+    .dumbbell { fill: #ffc107; }
+    .text { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; }
+    .text-main { fill: #667eea; }
+    .text-sub { fill: #764ba2; font-size: 10px; }
+  </style>
+  
+  <!-- Octopus Body -->
+  <circle cx="12" cy="12" r="8" class="octopus-body"/>
+  
+  <!-- Octopus Eyes -->
+  <circle cx="9" cy="10" r="2" class="octopus-eye"/>
+  <circle cx="15" cy="10" r="2" class="octopus-eye"/>
+  
+  <!-- Octopus Pupils -->
+  <circle cx="9" cy="10" r="1.2" class="octopus-pupil"/>
+  <circle cx="15" cy="10" r="1.2" class="octopus-pupil"/>
+  
+  <!-- Octopus Tentacles -->
+  <path d="M 6 18 Q 4 22 5 26" stroke="#667eea" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 12 19 Q 12 23 12 27" stroke="#667eea" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 18 18 Q 20 22 19 26" stroke="#667eea" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Dumbbell -->
+  <rect x="28" y="14" width="1" height="12" fill="#764ba2"/>
+  <circle cx="27" cy="13" r="2.5" class="dumbbell"/>
+  <circle cx="31" cy="13" r="2.5" class="dumbbell"/>
+  <circle cx="27" cy="27" r="2.5" class="dumbbell"/>
+  <circle cx="31" cy="27" r="2.5" class="dumbbell"/>
+  
+  <!-- Text -->
+  <text x="40" y="18" class="text text-main">OctoFit</text>
+  <text x="40" y="30" class="text text-sub">TRACKER</text>
+</svg>

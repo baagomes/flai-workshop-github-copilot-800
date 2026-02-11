@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 50%, #2d0a3a 100%);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 0, 0, 0.8);
+  border-left: 2px solid #ff0000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffff00, #ff0000);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffff00, #ff0000);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+/* ===== SELECTION STYLING ===== */
+::selection {
+  background: linear-gradient(90deg, #ff0000, #ffff00);
+  color: #000;
+}
+
+::-moz-selection {
+  background: linear-gradient(90deg, #ff0000, #ffff00);
+  color: #000;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background: rgba(26, 0, 0, 0.8);
+  color: #ffff00;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-danger {
+  color: #ff0000 !important;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(0, 0, 0, 0.6) !important;
+}
+
+.text-success {
+  color: #00ff00 !important;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(0, 0, 0, 0.6) !important;
+}
+
+.text-warning {
+  color: #ffff00 !important;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 0, 0, 0.4) !important;
+}
+
+.text-info {
+  color: #00ccff !important;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(0, 0, 0, 0.6) !important;
+}
+
+.bg-dark-hero {
+  background: linear-gradient(135deg, rgba(26, 0, 0, 0.95) 0%, rgba(51, 0, 0, 0.9) 100%) !important;
+  border: 2px solid #ff0000;
+}
+
+.shadow-hero {
+  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.3), inset 0 0 20px rgba(255, 215, 0, 0.08) !important;
+}
+
+/* ===== GLOBAL TRANSITIONS ===== */
+button, a, .btn, input {
+  transition: all 0.3s ease;
+}
+
+/* ===== ACCESSIBILITY ===== */
+:focus {
+  outline: 2px solid #ffff00;
+  outline-offset: 2px;
+}
+
+/* ===== SPINNER & LOADING ===== */
+.spinner-border {
+  color: #ffff00 !important;
+}
+
+.spinner-border-sm {
+  border-width: 0.35em;
+}

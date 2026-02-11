@@ -1,0 +1,25 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .octopus-body { fill: #667eea; }
+    .octopus-eye { fill: white; }
+    .octopus-pupil { fill: #333; }
+  </style>
+  
+  <rect width="32" height="32" fill="#f8f9fa"/>
+  
+  <!-- Octopus Circle -->
+  <circle cx="16" cy="14" r="10" class="octopus-body"/>
+  
+  <!-- Octopus Eyes -->
+  <circle cx="12" cy="11" r="2.5" class="octopus-eye"/>
+  <circle cx="20" cy="11" r="2.5" class="octopus-eye"/>
+  
+  <!-- Octopus Pupils -->
+  <circle cx="12" cy="11" r="1.5" class="octopus-pupil"/>
+  <circle cx="20" cy="11" r="1.5" class="octopus-pupil"/>
+  
+  <!-- Octopus Tentacles -->
+  <path d="M 8 22 Q 6 26 7 30" stroke="#667eea" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 16 24 Q 16 28 16 32" stroke="#667eea" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 24 22 Q 26 26 25 30" stroke="#667eea" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
